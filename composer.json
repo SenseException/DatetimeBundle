@@ -1,0 +1,26 @@
+{
+    "name": "sense-exception/datetime-bundle",
+    "description": "Symfony bundle for handling the PHP DateTime functionalities",
+    "type": "symfony-bundle",
+    "keywords": ["datetime", "date", "time", "intl", "dateformatter"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Claudio Zizza",
+            "email": "claudio@budgegeria.de"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "symfony/framework-bundle": "~2.3",
+        "symfony/twig-bundle": "~2.3",
+        "symfony/proxy-manager-bridge": "~2.3",
+        "ocramius/proxy-manager": "1.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.5"
+    },
+    "autoload": {
+        "psr-4": { "Budgegeria\\Bundle\\DatetimeBundle\\": "" }
+    }
+}
