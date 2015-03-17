@@ -4,6 +4,8 @@ namespace Budgegeria\Bundle\DatetimeBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
+use UnexpectedValueException;
+use DateTimeZone;
 
 /**
  * This is the class that validates and merges configuration from your app/config files
@@ -20,9 +22,17 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('budgegeria_datetime');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $rootNode
+            ->children()
+                ->scalarNode('timezone')
+                    ->example('values like UTC, America/Los_Angeles, Europe/Paris')
+                    ->isRequired()
+                    ->validate()
+                        ->ifNotInArray(DateTimeZone::listIdentifiers())
+                        ->thenInvalid('"%s" is no valid timezone')
+                    ->end()
+                ->end()
+            ->end();
 
         return $treeBuilder;
     }

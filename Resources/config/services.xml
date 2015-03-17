@@ -5,11 +5,13 @@
 
     <services>
         <service id="budgegeria_datetime.timezone_prototype" class="DateTimeZone" scope="prototype">
-            <argument type="string">UTC</argument>
+            <argument>%budgegeria_datetime.timezone%</argument>
         </service>
         
-        <service id="budgegeria_datetime.timezone" class="DateTimeZone">
-            <argument type="string">UTC</argument>
+        <service id="budgegeria_datetime.timezone_global" class="DateTimeZone">
+            <argument>%budgegeria_datetime.timezone%</argument>
         </service>
+        
+        <service id="budgegeria_datetime.timezone" alias="budgegeria_datetime.timezone_global" />
     </services>
 </container>
