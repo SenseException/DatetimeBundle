@@ -6,11 +6,12 @@
         convertErrorsToExceptions="true"
         convertNoticesToExceptions="true"
         convertWarningsToExceptions="true"
-        strict="true"
+        checkForUnintentionallyCoveredCode="true"
+        beStrictAboutTestsThatDoNotTestAnything="true"
         verbose="true">
     
     <testsuite name="small">
-        <directory suffix="./Test.php">Tests</directory>
+        <directory suffix="Test.php">./Tests</directory>
     </testsuite>
 
     <filter>
