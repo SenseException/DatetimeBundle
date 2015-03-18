@@ -18,7 +18,8 @@
         "ocramius/proxy-manager": "1.0.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.5"
+        "phpunit/phpunit": "~4.5",
+        "symfony/expression-language": "~2.4"
     },
     "autoload": {
         "psr-4": { "Budgegeria\\Bundle\\DatetimeBundle\\": "" }

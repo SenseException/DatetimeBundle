@@ -6,12 +6,12 @@ use PHPUnit_Framework_TestCase;
 use Budgegeria\Bundle\DatetimeBundle\DependencyInjection\Configuration;
 
 /**
- * @covers Configuration
+ * @covers Budgegeria\Bundle\DatetimeBundle\DependencyInjection\Configuration
  */
 class ConfigurationTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * @covers Configuration::getConfigTreeBuilder
+     * @covers Budgegeria\Bundle\DatetimeBundle\DependencyInjection\Configuration::getConfigTreeBuilder
      * @uses Symfony\Component\Config\Definition\Builder\TreeBuilder
      */
     public function testGetConfigTreeBuilder()
@@ -31,7 +31,7 @@ class ConfigurationTest extends PHPUnit_Framework_TestCase
 
    /**
     * @depends testGetConfigTreeBuilder
-    * @covers Configuration::getConfigTreeBuilder
+    * @covers Budgegeria\Bundle\DatetimeBundle\DependencyInjection\Configuration::getConfigTreeBuilder
     * @uses Symfony\Component\Config\Definition\Builder\TreeBuilder
     */
    public function testTimezoneChild(array $children)
