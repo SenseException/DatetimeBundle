@@ -4,7 +4,6 @@ namespace Budgegeria\Bundle\DatetimeBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
-use UnexpectedValueException;
 use DateTimeZone;
 
 /**
