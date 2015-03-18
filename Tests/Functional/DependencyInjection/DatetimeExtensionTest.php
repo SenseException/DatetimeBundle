@@ -1,6 +1,6 @@
 <?php
 
-namespace Budgegeria\Bundle\DatetimeBundle\Tests\Integration\DependencyInjection;
+namespace Budgegeria\Bundle\DatetimeBundle\Tests\Functional\DependencyInjection;
 
 use PHPUnit_Framework_TestCase;
 use Budgegeria\Bundle\DatetimeBundle\DependencyInjection\Configuration;
