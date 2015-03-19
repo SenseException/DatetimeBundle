@@ -13,6 +13,8 @@ use Symfony\Component\Config\Definition\Processor;
  */
 class BudgegeriaDatetimeExtensionTest extends PHPUnit_Framework_TestCase
 {
+    use \Budgegeria\Bundle\DatetimeBundle\Tests\Fixtures\ConfigTrait;
+
     private $configuration;
 
     private $processor;
@@ -55,17 +57,5 @@ class BudgegeriaDatetimeExtensionTest extends PHPUnit_Framework_TestCase
         unset($config['budgegeria_datetime']['timezone']);
 
         $this->processor->processConfiguration($this->configuration, $config);
-    }
-
-    /**
-     * @return array
-     */
-    private function getConfigFixture()
-    {
-        return array(
-            'budgegeria_datetime' => array(
-                'timezone' => 'UTC',
-            ),
-        );
     }
 }

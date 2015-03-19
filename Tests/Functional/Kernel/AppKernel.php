@@ -3,8 +3,13 @@
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
+/**
+ * A Kernel created for functional tests
+ */
 class AppKernel extends Kernel
 {
+    use \Budgegeria\Bundle\DatetimeBundle\Tests\Fixtures\ConfigTrait;
+
     public function registerBundles()
     {
         $bundles = array(
@@ -17,9 +22,7 @@ class AppKernel extends Kernel
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
         $loader->load(function ($containerBuilder) {
-            $containerBuilder->loadFromExtension('budgegeria_datetime', array(
-                'timezone' => 'UTC',
-            ));
+            $containerBuilder->loadFromExtension('budgegeria_datetime', $this->getConfigFixture()['budgegeria_datetime']);
         });
     }
 
