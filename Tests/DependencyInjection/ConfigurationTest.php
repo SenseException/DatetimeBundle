@@ -12,6 +12,7 @@ class ConfigurationTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @covers Budgegeria\Bundle\DatetimeBundle\DependencyInjection\Configuration::getConfigTreeBuilder
+     *
      * @uses Symfony\Component\Config\Definition\Builder\TreeBuilder
      */
     public function testGetConfigTreeBuilder()
@@ -27,11 +28,12 @@ class ConfigurationTest extends PHPUnit_Framework_TestCase
         $this->assertCount(1, $children);
 
         return $children;
-   }
+    }
 
    /**
     * @depends testGetConfigTreeBuilder
     * @covers Budgegeria\Bundle\DatetimeBundle\DependencyInjection\Configuration::getConfigTreeBuilder
+    *
     * @uses Symfony\Component\Config\Definition\Builder\TreeBuilder
     */
    public function testTimezoneChild(array $children)

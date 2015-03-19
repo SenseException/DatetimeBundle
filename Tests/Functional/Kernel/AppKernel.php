@@ -4,7 +4,7 @@ use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
 /**
- * A Kernel created for functional tests
+ * A Kernel created for functional tests.
  */
 class AppKernel extends Kernel
 {

@@ -7,7 +7,7 @@ use Budgegeria\Bundle\DatetimeBundle\DependencyInjection\Configuration;
 use Symfony\Component\Config\Definition\Processor;
 
 /**
- * Tests for the config processing
+ * Tests for the config processing.
  *
  * @codeCoverageIgnore
  */
