@@ -11,7 +11,7 @@ use Symfony\Component\Config\Definition\Processor;
  *
  * @codeCoverageIgnore
  */
-class DatetimeExtensionTest extends PHPUnit_Framework_TestCase
+class BudgegeriaDatetimeExtensionTest extends PHPUnit_Framework_TestCase
 {
     private $configuration;
 

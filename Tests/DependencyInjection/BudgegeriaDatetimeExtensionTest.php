@@ -3,14 +3,14 @@
 namespace Budgegeria\Bundle\DatetimeBundle\Tests\DependencyInjection;
 
 use PHPUnit_Framework_TestCase;
-use Budgegeria\Bundle\DatetimeBundle\DependencyInjection\DatetimeExtension;
+use Budgegeria\Bundle\DatetimeBundle\DependencyInjection\BudgegeriaDatetimeExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Prophecy\Argument;
 
 /**
  * @covers Budgegeria\Bundle\DatetimeBundle\DependencyInjection\DatetimeExtension
  */
-class DatetimeExtensionTest extends PHPUnit_Framework_TestCase
+class BudgegeriaDatetimeExtensionTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @covers Budgegeria\Bundle\DatetimeBundle\DependencyInjection\DatetimeExtension::load
@@ -29,7 +29,7 @@ class DatetimeExtensionTest extends PHPUnit_Framework_TestCase
             ->method('setParameter')
             ->with('budgegeria_datetime.timezone', 'UTC');
 
-        $extension = new DatetimeExtension();
+        $extension = new BudgegeriaDatetimeExtension();
         $extension->load($this->getConfigFixture(), $containerBuilder);
     }
 
