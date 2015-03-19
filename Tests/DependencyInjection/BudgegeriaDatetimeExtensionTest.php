@@ -5,6 +5,7 @@ namespace Budgegeria\Bundle\DatetimeBundle\Tests\DependencyInjection;
 use PHPUnit_Framework_TestCase;
 use Budgegeria\Bundle\DatetimeBundle\DependencyInjection\BudgegeriaDatetimeExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\HttpFoundation\ParameterBag;
 
 /**
  * @covers Budgegeria\Bundle\DatetimeBundle\DependencyInjection\DatetimeExtension
@@ -26,6 +27,9 @@ class BudgegeriaDatetimeExtensionTest extends PHPUnit_Framework_TestCase
         $containerBuilder = $this->getMockBuilder(ContainerBuilder::CLASS)
             ->disableOriginalConstructor()
             ->getMock();
+        $containerBuilder->expects($this->once())
+            ->method('getParameterBag')
+            ->will($this->returnValue($this->getMock(ParameterBag::CLASS)));
         $containerBuilder->expects($this->once())
             ->method('setParameter')
             ->with('budgegeria_datetime.timezone', 'UTC');
