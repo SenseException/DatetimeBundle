@@ -10,6 +10,10 @@
         beStrictAboutTestsThatDoNotTestAnything="true"
         verbose="true">
     
+    <php>
+        <server name="KERNEL_DIR" value="Tests/Functional/Kernel" />
+    </php>
+    
     <testsuite name="small">
         <directory suffix="Test.php">./Tests</directory>
     </testsuite>
