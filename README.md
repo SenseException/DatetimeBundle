@@ -1,6 +1,7 @@
 # BudgegeriaDatetimeBundle
 
 [![Build Status](https://travis-ci.org/SenseException/DatetimeBundle.svg?branch=master)](https://travis-ci.org/SenseException/DatetimeBundle)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/4fc3057b-8dda-4f30-a581-fda74ea85033/mini.png)](https://insight.sensiolabs.com/projects/4fc3057b-8dda-4f30-a581-fda74ea85033)
 
 Symfony bundle for handling the PHP DateTime functionalities.
 
@@ -29,7 +30,7 @@ class AppKernel extends Kernel
     {
         $bundles = array(
             ...
-            new Budgegeria\Bundle\DatetimeBundle\BudgegeriaDatetimeBundle()
+            new Budgegeria\Bundle\DatetimeBundle\BudgegeriaDatetimeBundle(),
         );
         //...
 
